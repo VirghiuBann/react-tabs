@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Loading from './components/Loading'
+import JobInfo from './components/JobInfo'
 
 const url = 'https://course-api.com/react-tabs-project'
 
@@ -36,6 +37,14 @@ const App = () => {
     return <Loading />
   }
 
-  return <h2>Tabs Starter</h2>
+  if (isError) {
+    return (
+      <div>
+        <h5>There was an error ...</h5>
+      </div>
+    )
+  }
+
+  return <main>{!!jobs && <JobInfo {...jobs[0]} />}</main>
 }
 export default App
