@@ -60,7 +60,7 @@ const App = () => {
           setCurrentItem={setCurrentItem}
         />
 
-        {!!jobs && <JobInfo {...jobs[0]} />}
+        {!!jobs && <JobInfo {...jobs[currentItem]} />}
       </section>
     </main>
   )
