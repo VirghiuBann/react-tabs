@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Loading from './components/Loading'
 
 const url = 'https://course-api.com/react-tabs-project'
 
@@ -30,6 +31,10 @@ const App = () => {
   useEffect(() => {
     getJobs()
   }, [])
+
+  if (isLoading) {
+    return <Loading />
+  }
 
   return <h2>Tabs Starter</h2>
 }
