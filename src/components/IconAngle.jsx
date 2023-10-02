@@ -1,11 +1,7 @@
 import { FaAnglesRight } from 'react-icons/fa6'
 
 const Icon = () => {
-  return (
-    <div>
-      <FaAnglesRight />
-    </div>
-  )
+  return <FaAnglesRight className='job-icon' />
 }
 
 export default Icon

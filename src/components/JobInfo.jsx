@@ -2,14 +2,13 @@ import Duties from './Duties'
 
 const JobInfo = ({ company, dates, title, duties }) => {
   return (
-    <section>
+    <div className='job-info'>
       <h3>{title}</h3>
-      <h3>{company}</h3>
-      <h4>{dates}</h4>
-      <div>
-        <Duties duties={duties} />
-      </div>
-    </section>
+      <h5 className='job-company'>{company}</h5>
+      <h4 className='job-date'>{dates}</h4>
+
+      <Duties duties={duties} />
+    </div>
   )
 }
 
